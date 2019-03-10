@@ -1,0 +1,96 @@
+.py5 {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+[class^='iconSprite-'] {
+  background-image: url(/src/image/iconSprite.png);
+  background-size: 100px 600px;
+  background-repeat: no-repeat;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: #fff;
+}
+
+::-moz-selection {
+  background: #173662;
+  color: #000;
+}
+
+::selection {
+  background: #173662;
+  color: #000;
+}
+
+[class*='flaticon-']:before {
+  display: inline-block;
+  font-family: 'Flaticon';
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-decoration: inherit;
+  text-rendering: optimizeLegibility;
+  text-transform: none;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+}
+
+.flaticon-time:before {
+  content: '\f100';
+}
+
+.flaticon-world:before {
+  content: '\f101';
+}
+
+.flaticon-drop:before {
+  content: '\f102';
+}
+
+.flaticon-like:before {
+  content: '\f103';
+}
+
+.flaticon-location-arrow:before {
+  content: '\f104';
+}
+
+.flaticon-phone-receiver:before {
+  content: '\f105';
+}
+
+.flaticon-menu:before {
+  content: '\f106';
+}
+
+.flaticon-close:before {
+  content: '\f107';
+}
+
+.flaticon-right-arrow:before {
+  content: '\f108';
+}
+
+.flaticon-play-button:before {
+  content: '\f109';
+}
+
+.flaticon-linkedin-logo:before {
+  content: '\f10a';
+}
+
+.flaticon-youtube-logo:before {
+  content: '\f10b';
+}
+
+.flaticon-up-arrow:before {
+  content: '\f10c';
+}
+
+.flaticon-facebook-logo:before {
+  content: '\f10d';
+}
+/*# sourceMappingURL=project-basscss.css.map */

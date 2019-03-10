@@ -1,0 +1,334 @@
+@import './src/module/stooges-variables.scss';
+@import './src/scss/project-variables.scss';
+@import './src/module/stooges-mixin.scss';
+@import './src/scss/project-mixin.scss';
+@import './src/module/stooges-basscss.scss';
+@import './src/scss/project-basscss.scss';
+@import './src/scss/fontFamily.scss';
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700');
+
+// .image-scale-63by100 {
+// 	&:before {
+// 		padding-top: calc(1 / 1 * 100%);
+// 	}
+// }
+
+.headerTop {
+	@media #{$breakpoint-up-lg} {
+		background-color: $color-basic-4;
+		padding-top: 0.5rem;
+		padding-bottom: 0.5rem;
+		.headerTopContent {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			font-size: 14px;
+			.address {
+				color: $font-color-3;
+				.icon {
+					margin-right: 4px;
+				}
+				a {
+					color: $font-color-5;
+				}
+			}
+			.contact {
+				color: $font-color-3;
+				.icon {
+					margin-right: 4px;
+				}
+				a {
+					&:hover {
+						color: $font-color-6;
+					}
+				}
+			}
+		}
+	}
+	@media #{$breakpoint-down-md} {
+		.headerTopContent {
+			display: none;
+		}
+	}
+}
+
+.header {
+	background-color: $headerColor;
+	@media #{$breakpoint-up-lg} {
+		.navCover {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			height: $headerHeight;
+			i {
+				display: none;
+			}
+			a {
+				img {
+					height: 50px;
+					display: block;
+				}
+			}
+			nav {
+				text-transform: uppercase;
+				width: auto;
+				.mainMenu {
+					margin: 0;
+					padding-left: 0;
+					list-style: none;
+					li {
+						display: inline-block;
+						position: relative;
+						&:last-child {
+							a {
+								padding-right: 0;
+							}
+						}
+						a {
+							color: $font-color-3;
+							font-weight: $font-weight;
+							padding: 48px 16px;
+							font-size: $h5;
+							&:hover {
+								color: $font-color-6;
+							}
+						}
+						.href {
+							color: $font-color-3;
+							font-weight: $font-weight;
+							padding: 48px 16px;
+							font-size: $h5;
+						}
+						&:hover {
+							.subMenu {
+								visibility: visible;
+								opacity: 1;
+								transform: translateY(0);
+							}
+							.href {
+								color: $font-color-6;
+							}
+						}
+						.subMenu {
+							visibility: hidden;
+							opacity: 0;
+							transition: 0.3s ease-in;
+							transform: translateY(50px);
+							position: absolute;
+							top: 64px;
+							left: 0;
+							width: $subMenuWidth;
+							padding: 32px 16px;
+							background-color: $color-secondary-2;
+							li {
+								padding: 0;
+								margin-bottom: 16px;
+								a {
+									color: $font-color-2;
+									line-height: 1.5;
+									text-transform: uppercase;
+									padding: 0;
+									&:hover {
+										color: #ccc;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	@media #{$breakpoint-down-md} {
+		.navCover {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			height: $headerHeight;
+			i {
+				cursor: pointer;
+				font-size: 18px;
+				padding: 12px;
+			}
+			a {
+				img {
+					height: 50px;
+					display: block;
+				}
+			}
+			&::after {
+				content: '';
+				width: 30px;
+				visibility: hidden;
+			}
+			nav {
+				display: none;
+			}
+		}
+	}
+}
+
+.sideNav {
+	width: 100%;
+	height: 100%;
+	.backdrop {
+		display: none;
+		position: fixed;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		background-color: rgba(0, 0, 0, 0.8);
+		z-index: 1;
+		&.openBackdrop {
+			display: block;
+		}
+	}
+
+	.whiteCard {
+		position: fixed;
+
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: $sideBarWidth;
+		background-color: #ffffff;
+		box-shadow: 1px 1px 5px 1px rgba(23, 54, 98, 0.4);
+		visibility: hidden;
+		transform: translateX(-100%);
+		transition: 0.3s ease-in;
+		overflow-y: auto;
+		z-index: 1;
+		padding: 16px 0 32px;
+		&.active {
+			transform: translateX(0);
+			visibility: visible;
+		}
+
+		i {
+			font-size: $h3;
+			padding: 8px 16px;
+			cursor: pointer;
+			display: block;
+		}
+		a {
+			img {
+				padding: 16px 40px;
+				display: block;
+				width: 100%;
+			}
+		}
+		.sideBarContent {
+			text-transform: uppercase;
+			width: auto;
+			.mainMenu {
+				margin: 0;
+				padding-left: 0;
+				list-style: none;
+				.mainMenuList {
+					padding: 0;
+					display: block;
+					position: relative;
+					border-bottom: 1px solid #eae9e8;
+					a {
+						color: $font-color-3;
+						font-weight: $font-weight;
+						padding: 16px;
+						font-size: $h5;
+						display: block;
+						&:hover {
+							color: $font-color-6;
+						}
+					}
+					.href {
+						color: $font-color-3;
+						font-weight: $font-weight;
+						padding: 16px;
+						font-size: $h5;
+						display: block;
+						&:hover {
+							color: $font-color-6;
+						}
+					}
+					.subMenu {
+						margin: 0;
+						padding-left: 0;
+						list-style: none;
+						transform: scale(0);
+						transform-origin: left;
+						height: 0;
+						&.show {
+							height: auto;
+							transform: scale(1);
+							transition: 0.3s;
+						}
+						.subMenuList {
+							padding: 8px 16px 8px 24px;
+							a {
+								color: $font-color-6;
+								line-height: 1.5;
+								font-size: 12px;
+								text-transform: uppercase;
+								padding: 0;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+.slideShow {
+	height: $img-height-lg;
+	width: 100%;
+	.slideShowContent {
+		padding-top: $img-height-lg;
+		position: relative;
+		display: block;
+		width: 100%;
+		overflow: hidden;
+		img {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			display: block;
+		}
+		.textContent {
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			background-color: rgba(23, 54, 98, 0.4);
+			text-align: center;
+			.h1 {
+				word-spacing: $space-1;
+			}
+			.content {
+				color: $font-color-2;
+				animation: 2s ease 0s 1 normal forwards running;
+				@media #{$breakpoint-up-sm} {
+					font-size: $h4;
+				}
+			}
+			a {
+				@extend %button;
+				i {
+					margin-left: 4px;
+					font-size: 10px;
+					height: $icon-line-height;
+					width: $icon-width;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<link rel="stylesheet" href="test.css" />
+		<link rel="stylesheet" href="/node_modules/owl.carousel/dist/assets/owl.carousel.min.css" />
+		<style>
+			* {
+				/* border: solid 1px red; */
+			}
+		</style>
+		<title>Slider</title>
+	</head>
+	<body>
+		<div class="slideShow">
+			<div class="owl-carousel owl-theme owl-loaded owl-drag">
+				<div class="slideShowContent">
+					<img src="src/image/homePage/homPageSlider/2.jpg" />
+					<div class="textContent">
+						<h1 class="h1">Insect Light Trap Manufacturing</h1>
+						<p class="content">Commercial Sticky Pad Series & Decorative Sticky Pad Series</p>
+						<a href="">read more<i class="flaticon-right-arrow"></i></a>
+					</div>
+				</div>
+				<div class="slideShowContent">
+					<img src="src/image/homePage/homPageSlider/1.jpg" />
+					<div class="textContent">
+						<h1 class="h1">Insect Light Trap Manufacturing</h1>
+						<p class="content">Commercial Sticky Pad Series & Decorative Sticky Pad Series</p>
+						<a href="">read more<i class="flaticon-right-arrow"></i></a>
+					</div>
+				</div>
+
+				<div class="slideShowContent">
+					<img src="src/image/homePage/homPageSlider/3.jpg" />
+					<div class="textContent">
+						<h1 class="h1">Insect Light Trap Manufacturing</h1>
+						<p class="content">Fly StickyPad * Rodent Glue Trap * Insect Monitoring Glue Trap</p>
+						<a href="">read more<i class="flaticon-right-arrow"></i></a>
+					</div>
+				</div>
+				<div class="slideShowContent">
+					<img src="src/image/homePage/homPageSlider/4.jpg" />
+					<div class="textContent">
+						<h1 class="h1">Rodent Control Products</h1>
+						<p class="content">Rodent Bait Station * Rat Glue Trap * Rodent Snap Trap</p>
+						<a href="">read more<i class="flaticon-right-arrow"></i></a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script src="/node_modules/jquery/dist/jquery.js"></script>
+		<script src="/node_modules/owl.carousel/dist/owl.carousel.min.js"></script>
+
+		<script>
+			$(document).ready(function() {
+				$('.owl-carousel').owlCarousel({
+					loop: true,
+					items: 1, // each slide 1 img
+				});
+			});
+		</script>
+	</body>
+</html>

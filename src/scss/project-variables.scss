@@ -1,0 +1,128 @@
+//app 规范
+//1 color
+$color-main: #173662; //按钮，文字，顶栏...
+$color-secondary-1: gray;
+$color-secondary-2: #3a3a3a; //footer
+$color-secondary-3: #2f2f2f; //footer
+$color-basic-1: #676767; // 背景
+$color-basic-2: #e4e4e4; // 底拦
+$color-basic-3: #173662; // 常规图标 hover using
+$color-basic-4: #f5f5f5; // tooltips
+
+//2 font color
+
+$font-color-1: #4a4a4a; // 正文
+$font-color-2: #ffffff; // 次级文字
+$font-color-3: #8f8f8f; // 提示类文字
+$font-color-4: #a6a6a6; // 提示类可点击文字
+$font-color-5: #173662; // 顶拦与按钮上的文字
+
+//3 font-family & font-size
+$font-family-1: 'Lato', -apple-system, BlinkMacSystemFont, Helvetica Neue, PingFang SC, Microsoft YaHei,
+	Source Han Sans SC, Noto Sans CJK SC, WenQuanYi Micro Hei, sans-serif;
+$font-family-2: 'Roboto Condensed', -apple-system, BlinkMacSystemFont, Helvetica Neue, PingFang SC, Microsoft YaHei,
+	Source Han Sans SC, Noto Sans CJK SC, WenQuanYi Micro Hei, sans-serif;
+$font-family-3: '-', -apple-system, BlinkMacSystemFont, Helvetica Neue, PingFang SC, Microsoft YaHei, Source Han Sans SC,
+	Noto Sans CJK SC, WenQuanYi Micro Hei, sans-serif;
+$h1: 40px; // 特大号：顶拦标题，大按钮文字
+$h2: 2rem; // 大号：正文
+$h3: 20px; // 中号：话题标题，人名，评论，大按钮文字，输入框，搜索条
+$h4: 16px; // 小号：小按钮文字，地址，提示小子
+$h5: 0.875rem; // 特小号：次次级说明
+$h6: 14px;
+
+//4. padding
+$space-1: 3px; // 特密
+$space-2: 8px; // 亲密
+$space-3: 16px; // 一般
+$space-4: 32px; // 区分
+$space-5: 40px;
+$space-6: 48px;
+$space-7: 56px;
+$space-8: 64px;
+
+//project
+$font-color-6: #101010;
+
+$icon-line-height: 16px;
+$icon-width: 5.725px;
+
+$h1-only-md: 32px;
+$h1-only-sm: 28px;
+$h1-only-xs: 24px;
+
+$img-height-lg: 500px;
+$img-height-md: 400px;
+$img-height-sm: 40%;
+$img-height-xs: 220px;
+
+$headerHeight: 110px;
+$sideBarWidth: 260px;
+$subMenuWidth: 220px;
+$headerColor: #ffffff;
+
+$container-sm-max-width: 100%;
+$container-md-max-width: 100%;
+$container-lg-max-width: 100%;
+$container-xl-max-width: 1300px;
+$container-padding: $space-3;
+$container-xs-padding: $space-1;
+$body-background-color: white;
+$body-font-size: $h5;
+$body-font-family: $font-family-1;
+$placeholderColor: $font-color-1;
+$font-weight: 700;
+
+//h1
+$font-family-h1: $font-family-1;
+$color-h1: $font-color-2;
+$line-height-h1: 1.2;
+$letter-spacing-h1: 1;
+$font-weight-h1: 500;
+$margin-h1: 0 0 0;
+//h2
+$font-family-h2: $font-family-1;
+$color-h2: $font-color-1;
+$line-height-h2: 38.4px;
+$letter-spacing-h2: 1;
+$font-weight-h2: 500;
+$margin-h2: 1.625rem 0;
+//h3
+$font-family-h3: $font-family-1;
+$color-h3: $font-color-1;
+$line-height-h3: 1;
+$letter-spacing-h3: 1;
+$font-weight-h3: normal;
+$margin-h3: 0 0 10px;
+
+$font-family-h4: $font-family-1;
+$color-h4: $font-color-1;
+$line-height-h4: 1;
+$letter-spacing-h4: 1;
+$font-weight-h4: normal;
+$margin-h4: 0 0 10px;
+
+$font-family-h5: $font-family-1;
+$color-h5: $font-color-1;
+$line-height-h5: 1;
+$letter-spacing-h5: 1;
+$font-weight-h5: normal;
+$margin-h5: 0 0 10px;
+
+$font-family-h6: $font-family-1;
+$color-h6: $font-color-1;
+$line-height-h6: 1;
+$letter-spacing-h6: 1;
+$font-weight-h6: $font-weight;
+$margin-h6: 0 0 10px;
+
+$font-family-p: $font-family-1;
+$color-p: $font-color-1;
+$line-height-p: 1;
+$letter-spacing-p: normal;
+$font-weight-p: 400;
+$margin-p: 16px 0;
+
+$font-Flaticon-right-arrow: '\f100';
+$font-Flaticon-right-quote: '\f101';
+$font-Flaticon-left-quote: '\f102';

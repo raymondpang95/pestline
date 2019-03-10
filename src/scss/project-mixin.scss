@@ -1,0 +1,50 @@
+@import '../module/stooges-variables.scss';
+@import '../module/stooges-mixin.scss';
+@import './project-variables.scss';
+
+%button {
+	background-color: #173662;
+	color: #fff;
+	border: none;
+	outline: none;
+	padding: 1em 2em;
+	transition: 0.3s ease-in;
+	cursor: pointer;
+}
+
+%bottomLine {
+	background-color: #173662;
+	position: absolute;
+	content: '';
+	height: 2px;
+	width: 4.2rem;
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.py5 {
+	padding-top: 3rem;
+	padding-bottom: 3rem;
+}
+
+%centerFunction {
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+[class^='iconSprite-'] {
+	background-image: url(/src/image/iconSprite.png);
+	background-size: 100px 600px;
+	background-repeat: no-repeat;
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	background-color: #fff;
+}

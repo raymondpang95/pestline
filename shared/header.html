@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<link rel="stylesheet" href="/style.css" />
+		<title>Test</title>
+	</head>
+
+	<body>
+		<div class="headerTop">
+			<div class="container">
+				<div class="headerTopContent">
+					<span class="address">
+						<i class="flaticon-location-arrow "></i>
+						<a href="">81100 Johor Bahru, Johor, Malaysia.</a>
+					</span>
+					<span class="contact">
+						<i class="flaticon-call-answer icon"></i>
+						For a Free Consultation, Call
+						<a href=""><b>(+60) 16-726 3698</b></a>
+					</span>
+				</div>
+			</div>
+		</div>
+
+		<div class="header">
+			<div class="container">
+				<div class="navCover">
+					<i class="flaticon-menu" id="open"></i>
+					<a href="" class="logo"><img class="image" src="/src/image/logo/logo.jpg"/></a>
+					<nav id="navContent">
+						<ul class="mainMenu">
+							<li class="mainMenuList"><a href="">Home</a></li>
+							<li class="mainMenuList">
+								<span class="href">Services</span>
+								<ul class="subMenu">
+									<li class="subMenuList"><a href="">Leading Pest Control Equipment</a></li>
+									<li class="subMenuList"><a href="">Insect Light Trap Manufacturing</a></li>
+									<li class="subMenuList"><a href="">Pest Glue Trap Manufacturing</a></li>
+								</ul>
+							</li>
+							<li class="mainMenuList">
+								<span class="href">Products</span>
+								<ul class="subMenu">
+									<li class="subMenuList"><a href="">Insect Light Trap</a></li>
+									<li class="subMenuList"><a href="">Application Equipment</a></li>
+									<li class="subMenuList"><a href="">RAT CONTROL PRODUCTS</a></li>
+									<li class="subMenuList"><a href="">Insect Light Trap Consumables</a></li>
+									<li class="subMenuList"><a href="">BIRD CONTROL PRODUCTS</a></li>
+									<li class="subMenuList"><a href="">COCKROACH CONTROL PRODUCTS</a></li>
+								</ul>
+							</li>
+							<li class="mainMenuList"><a href="">News</a></li>
+							<li class="mainMenuList"><a href="">Gallery</a></li>
+							<li class="mainMenuList"><a href="">About</a></li>
+							<li class="mainMenuList"><a href="">Contact</a></li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</div>
+
+		<div class="sideNav" id="sideNav">
+			<div class="backdrop" id="backdrop"></div>
+			<div class="whiteCard" id="whiteCard">
+				<i class="flaticon-close-button close" id="close"></i>
+				<a href="" class="logo"><img class="image" src="src/image/logo/logo.jpg"/></a>
+				<div class="sideBarContent" id="sideBarContent"></div>
+			</div>
+		</div>
+
+		<script>
+			document.getElementById('open').addEventListener('click', function() {
+				document.getElementById('whiteCard').classList.toggle('active');
+				document.getElementById('backdrop').classList.toggle('openBackdrop');
+			});
+
+			function close() {
+				document.getElementById('whiteCard').classList.remove('active');
+				document.getElementById('backdrop').classList.remove('openBackdrop');
+			}
+
+			document.getElementById('close').addEventListener('click', function() {
+				close();
+			});
+
+			document.getElementById('backdrop').addEventListener('click', function() {
+				close();
+			});
+
+			const navContentElem = document.getElementById('sideBarContent');
+			document.getElementById('navContent').childNodes.forEach(node => {
+				const clone = node.cloneNode(true);
+				navContentElem.appendChild(clone);
+			});
+
+			document.querySelectorAll('.href').forEach(function(link) {
+				link.addEventListener('click', function() {
+					document.querySelectorAll('.subMenu').forEach(function(subMenuLink) {
+						subMenuLink.classList.remove('show');
+					});
+					link.nextElementSibling.classList.add('show');
+				});
+			});
+		</script>
+	</body>
+</html>
