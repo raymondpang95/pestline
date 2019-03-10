@@ -7,119 +7,168 @@
 @import './src/scss/fontFamily.scss';
 @import url('https://fonts.googleapis.com/css?family=Lato:400,700');
 
-.sideNav {
-	// margin-top: 50px;
-	width: 100%;
-	height: 100%;
+// .sideNav {
+// 	// margin-top: 50px;
+// 	width: 100%;
+// 	height: 100%;
 
-	.backdrop {
-		display: none;
-		position: fixed;
-		width: 100%;
-		height: 100%;
-		top: 0;
-		left: 0;
-		background-color: rgba(0, 0, 0, 0.8);
-		z-index: -1;
-		&.openBackdrop {
-			display: block;
-		}
+// 	.backdrop {
+// 		display: none;
+// 		position: fixed;
+// 		width: 100%;
+// 		height: 100%;
+// 		top: 0;
+// 		left: 0;
+// 		background-color: rgba(0, 0, 0, 0.8);
+// 		z-index: -1;
+// 		&.openBackdrop {
+// 			display: block;
+// 		}
+// 	}
+
+// 	.whiteCard {
+// 		position: fixed;
+// 		top: 0;
+// 		left: 0;
+// 		height: 100%;
+// 		width: $sideBarWidth;
+// 		background-color: #ffffff;
+// 		box-shadow: 1px 1px 5px 1px rgba(23, 54, 98, 0.4);
+// 		// visibility: hidden;
+// 		// transform: translateX(-100%);
+// 		transition: 0.3s ease-in;
+// 		overflow-y: auto;
+// 		z-index: 1;
+// 		padding: 16px 0 32px;
+// 		&.active {
+// 			transform: translateX(0);
+// 			visibility: visible;
+// 		}
+
+// 		i {
+// 			font-size: $h3;
+// 			padding: 8px 16px;
+// 			cursor: pointer;
+// 			display: block;
+// 		}
+// 		a {
+// 			img {
+// 				padding: 16px 40px;
+// 				display: block;
+// 				width: 100%;
+// 			}
+// 		}
+// 		.sideBarContent {
+// 			text-transform: uppercase;
+// 			width: auto;
+// 			.mainMenu {
+// 				margin: 0;
+// 				padding-left: 0;
+// 				list-style: none;
+// 				.mainMenuList {
+// 					padding: 0;
+// 					display: block;
+// 					position: relative;
+// 					border-bottom: 1px solid #eae9e8;
+// 					// &:last-child {
+// 					// 	a {
+// 					// 		padding-right: 0;
+// 					// 	}
+// 					// }
+// 					a {
+// 						color: $font-color-3;
+// 						font-weight: $font-weight;
+// 						padding: 16px;
+// 						font-size: $h5;
+// 						display: block;
+// 						&:hover {
+// 							color: $font-color-6;
+// 						}
+// 					}
+// 					.href {
+// 						color: $font-color-3;
+// 						font-weight: $font-weight;
+// 						padding: 16px;
+// 						font-size: $h5;
+// 						display: block;
+// 						&:hover {
+// 							color: $font-color-6;
+// 						}
+// 					}
+// 					.subMenu {
+// 						margin: 0;
+// 						padding-left: 0;
+// 						list-style: none;
+// 						transform: scale(0);
+// 						transform-origin: left;
+// 						height: 0;
+// 						&.show {
+// 							height: auto;
+// 							transform: scale(1);
+// 							transition: 0.3s;
+// 						}
+// 						.subMenuList {
+// 							padding: 8px 16px 8px 24px;
+// 							a {
+// 								color: $font-color-6;
+// 								line-height: 1.5;
+// 								font-size: 12px;
+// 								text-transform: uppercase;
+// 								padding: 0;
+// 							}
+// 						}
+// 					}
+// 				}
+// 			}
+// 		}
+// 	}
+// }
+
+// a {
+// 	display: block;
+// 	width: 100px;
+// 	padding: 24px 16px;
+// 	position: relative;
+// 	&:after {
+// 		width: 0;
+// 		background-color: #173662;
+// 		position: absolute;
+// 		content: '';
+// 		height: 2px;
+// 		width: 0%;
+// 		bottom: 0;
+// 		left: 50%;
+// 		transition: 0.3s;
+// 	}
+// 	&:hover {
+// 		&:after {
+// 			width: 100%;
+// 			left: 0%;
+// 		}
+// 	}
+// }
+
+.abc {
+	margin: 0 auto;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	border: solid 1px;
+
+	animation-duration: 4000ms;
+	animation-iteration-count: infinite;
+	// animation-timing-function: linear;
+
+	&:hover {
+		animation-name: spin;
 	}
 
-	.whiteCard {
-		position: fixed;
-		top: 0;
-		left: 0;
-		height: 100%;
-		width: $sideBarWidth;
-		background-color: #ffffff;
-		box-shadow: 1px 1px 5px 1px rgba(23, 54, 98, 0.4);
-		// visibility: hidden;
-		// transform: translateX(-100%);
-		transition: 0.3s ease-in;
-		overflow-y: auto;
-		z-index: 1;
-		padding: 16px 0 32px;
-		&.active {
-			transform: translateX(0);
-			visibility: visible;
+	@keyframes spin {
+		from {
+			transform: rotate(0deg);
 		}
-
-		i {
-			font-size: $h3;
-			padding: 8px 16px;
-			cursor: pointer;
-			display: block;
-		}
-		a {
-			img {
-				padding: 16px 40px;
-				display: block;
-				width: 100%;
-			}
-		}
-		.sideBarContent {
-			text-transform: uppercase;
-			width: auto;
-			.mainMenu {
-				margin: 0;
-				padding-left: 0;
-				list-style: none;
-				.mainMenuList {
-					padding: 0;
-					display: block;
-					position: relative;
-					border-bottom: 1px solid #eae9e8;
-					// &:last-child {
-					// 	a {
-					// 		padding-right: 0;
-					// 	}
-					// }
-					a {
-						color: $font-color-3;
-						font-weight: $font-weight;
-						padding: 16px;
-						font-size: $h5;
-						display: block;
-						&:hover {
-							color: $font-color-6;
-						}
-					}
-					.href {
-						color: $font-color-3;
-						font-weight: $font-weight;
-						padding: 16px;
-						font-size: $h5;
-						display: block;
-						&:hover {
-							color: $font-color-6;
-						}
-					}
-					.subMenu {
-						margin: 0;
-						padding-left: 0;
-						list-style: none;
-						transform: scale(0);
-						transform-origin: left;
-						height: 0;
-						&.show {
-							height: auto;
-							transform: scale(1);
-							transition: 0.3s;
-						}
-						.subMenuList {
-							padding: 8px 16px 8px 24px;
-							a {
-								color: $font-color-6;
-								line-height: 1.5;
-								font-size: 12px;
-								text-transform: uppercase;
-								padding: 0;
-							}
-						}
-					}
-				}
-			}
+		to {
+			transform: rotate(360deg);
 		}
 	}
 }

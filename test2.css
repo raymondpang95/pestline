@@ -14,6 +14,28 @@
   background-color: #fff;
 }
 
+@-webkit-keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -1062,6 +1084,17 @@ router-outlet {
   background-color: #fff;
 }
 
+@keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
 ::-moz-selection {
   background: #173662;
   color: #000;
@@ -1151,131 +1184,31 @@ router-outlet {
   font-style: normal;
 }
 
-.sideNav {
-  width: 100%;
-  height: 100%;
+.abc {
+  margin: 0 auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border: solid 1px;
+  -webkit-animation-duration: 4000ms;
+          animation-duration: 4000ms;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
 }
 
-.sideNav .backdrop {
-  display: none;
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  background-color: rgba(0, 0, 0, 0.8);
-  z-index: -1;
+.abc:hover {
+  -webkit-animation-name: spin;
+          animation-name: spin;
 }
 
-.sideNav .backdrop.openBackdrop {
-  display: block;
-}
-
-.sideNav .whiteCard {
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 260px;
-  background-color: #ffffff;
-  -webkit-box-shadow: 1px 1px 5px 1px rgba(23, 54, 98, 0.4);
-          box-shadow: 1px 1px 5px 1px rgba(23, 54, 98, 0.4);
-  -webkit-transition: 0.3s ease-in;
-  transition: 0.3s ease-in;
-  overflow-y: auto;
-  z-index: 1;
-  padding: 16px 0 32px;
-}
-
-.sideNav .whiteCard.active {
-  -webkit-transform: translateX(0);
-          transform: translateX(0);
-  visibility: visible;
-}
-
-.sideNav .whiteCard i {
-  font-size: 20px;
-  padding: 8px 16px;
-  cursor: pointer;
-  display: block;
-}
-
-.sideNav .whiteCard a img {
-  padding: 16px 40px;
-  display: block;
-  width: 100%;
-}
-
-.sideNav .whiteCard .sideBarContent {
-  text-transform: uppercase;
-  width: auto;
-}
-
-.sideNav .whiteCard .sideBarContent .mainMenu {
-  margin: 0;
-  padding-left: 0;
-  list-style: none;
-}
-
-.sideNav .whiteCard .sideBarContent .mainMenu .mainMenuList {
-  padding: 0;
-  display: block;
-  position: relative;
-  border-bottom: 1px solid #eae9e8;
-}
-
-.sideNav .whiteCard .sideBarContent .mainMenu .mainMenuList a {
-  color: #8f8f8f;
-  font-weight: 700;
-  padding: 16px;
-  font-size: 0.875rem;
-  display: block;
-}
-
-.sideNav .whiteCard .sideBarContent .mainMenu .mainMenuList a:hover {
-  color: #101010;
-}
-
-.sideNav .whiteCard .sideBarContent .mainMenu .mainMenuList .href {
-  color: #8f8f8f;
-  font-weight: 700;
-  padding: 16px;
-  font-size: 0.875rem;
-  display: block;
-}
-
-.sideNav .whiteCard .sideBarContent .mainMenu .mainMenuList .href:hover {
-  color: #101010;
-}
-
-.sideNav .whiteCard .sideBarContent .mainMenu .mainMenuList .subMenu {
-  margin: 0;
-  padding-left: 0;
-  list-style: none;
-  -webkit-transform: scale(0);
-          transform: scale(0);
-  -webkit-transform-origin: left;
-          transform-origin: left;
-  height: 0;
-}
-
-.sideNav .whiteCard .sideBarContent .mainMenu .mainMenuList .subMenu.show {
-  height: auto;
-  -webkit-transform: scale(1);
-          transform: scale(1);
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
-}
-
-.sideNav .whiteCard .sideBarContent .mainMenu .mainMenuList .subMenu .subMenuList {
-  padding: 8px 16px 8px 24px;
-}
-
-.sideNav .whiteCard .sideBarContent .mainMenu .mainMenuList .subMenu .subMenuList a {
-  color: #101010;
-  line-height: 1.5;
-  font-size: 12px;
-  text-transform: uppercase;
-  padding: 0;
+@keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
 }
 /*# sourceMappingURL=test2.css.map */
